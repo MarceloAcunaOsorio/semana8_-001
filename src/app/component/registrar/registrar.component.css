@@ -1,0 +1,41 @@
+.logo {
+    width: 150px;
+  }
+  
+  input[type="password"]::-ms-reveal,
+  input[type="password"]::-ms-clear {
+    display: inline-block;
+  }
+  
+  .separator {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: #aaa;
+  }
+  
+  .separator::before,
+  .separator::after {
+    content: "";
+    flex: 1;
+    border-bottom: 1px solid #aaa;
+  }
+  
+  .separator:not(:empty)::before {
+    margin-right: 0.25em;
+  }
+  
+  .separator:not(:empty)::after {
+    margin-left: 0.25em;
+  }
+  
+  .separator-text {
+    font-size: 1em;
+    color: #555;
+    padding: 0 10px;
+    background-color: #fff;
+  }
+  
+  .invalid-feedback {
+    display: block;
+  }

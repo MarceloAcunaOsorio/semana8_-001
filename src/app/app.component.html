@@ -1,0 +1,24 @@
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+<!-- * * * * * * * * * * * The content below * * * * * * * * * * * -->
+<!-- * * * * * * * * * * is only a placeholder * * * * * * * * * * -->
+<!-- * * * * * * * * * * and can be replaced.  * * * * * * * * * * -->
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+<!-- * * * * * * * * * Delete the template below * * * * * * * * * -->
+<!-- * * * * * * * to get started with your project! * * * * * * * -->
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+
+
+<div class="d-flex flex-column h-100">
+    <app-menu></app-menu>
+    <!-- The main area does not shrink, 'pushing down' the footer -->
+    <main class="flex-shrink-0">
+      <!-- This will render the routes -->
+      <router-outlet></router-outlet>
+    </main>
+    <!-- This keeps the footer down if the main content does not fill up the space -->
+    <footer class="py-0  text-center text-muted">
+      <app-footer></app-footer>
+    </footer>
+  </div>
+
+

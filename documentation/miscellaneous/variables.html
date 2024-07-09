@@ -1,0 +1,507 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>pro-angular001 documentation</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	   <link rel="stylesheet" href="../styles/style.css">
+        <link rel="stylesheet" href="../styles/dark.css">
+    </head>
+    <body>
+          <script>
+               // Blocking script to avoid flickering dark mode
+               // Dark mode toggle button
+               var useDark = window.matchMedia('(prefers-color-scheme: dark)');
+               var darkModeState = useDark.matches;
+               var $darkModeToggleSwitchers = document.querySelectorAll('.dark-mode-switch input');
+               var $darkModeToggles = document.querySelectorAll('.dark-mode-switch');
+               var darkModeStateLocal = localStorage.getItem('compodoc_darkmode-state');
+
+               function checkToggle(check) {
+                    for (var i = 0; i < $darkModeToggleSwitchers.length; i++) {
+                         $darkModeToggleSwitchers[i].checked = check;
+                    }
+               }
+
+               function toggleDarkMode(state) {
+                    if (window.localStorage) {
+                         localStorage.setItem('compodoc_darkmode-state', state);
+                    }
+
+                    checkToggle(state);
+
+                    const hasClass = document.body.classList.contains('dark');
+
+                    if (state) {
+                         for (var i = 0; i < $darkModeToggles.length; i++) {
+                              $darkModeToggles[i].classList.add('dark');
+                         }
+                         if (!hasClass) {
+                              document.body.classList.add('dark');
+                         }
+                    } else {
+                         for (var i = 0; i < $darkModeToggles.length; i++) {
+                              $darkModeToggles[i].classList.remove('dark');
+                         }
+                         if (hasClass) {
+                              document.body.classList.remove('dark');
+                         }
+                    }
+               }
+
+               useDark.addEventListener('change', function (evt) {
+                    toggleDarkMode(evt.matches);
+               });
+               if (darkModeStateLocal) {
+                    darkModeState = darkModeStateLocal === 'true';
+               }
+               toggleDarkMode(darkModeState);
+          </script>
+
+        <div class="navbar navbar-default navbar-fixed-top d-md-none p-0">
+               <div class="d-flex">
+                    <a href="../" class="navbar-brand">pro-angular001 documentation</a>
+                    <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+               </div>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search"><input type="text" placeholder="Type to search"></div>            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="d-none d-md-block menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content miscellaneous-variables">
+                   <div class="content-data">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<ol class="breadcrumb">
+  <li class="breadcrumb-item">Miscellaneous</li>
+  <li class="breadcrumb-item">Variables</li>
+</ol>
+
+<section data-compodoc="block-index">
+    <h3 id="index">Index</h3>
+    <table class="table table-sm table-bordered index-table">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <ul class="index-list">
+                        <li>
+                            <a href="#appConfig" title="src/app/app.config.ts" ><b>appConfig</b>&nbsp;&nbsp;&nbsp;(src/.../app.config.ts)</a>
+                        </li>
+                        <li>
+                            <a href="#crossPasswordMatchingValidatior" title="src/app/component/registrar/register-custom-Validators.ts" ><b>crossPasswordMatchingValidatior</b>&nbsp;&nbsp;&nbsp;(src/.../register-custom-Validators.ts)</a>
+                        </li>
+                        <li>
+                            <a href="#customPasswordValidator" title="src/app/component/registrar/register-custom-Validators.ts" ><b>customPasswordValidator</b>&nbsp;&nbsp;&nbsp;(src/.../register-custom-Validators.ts)</a>
+                        </li>
+                        <li>
+                            <a href="#listaItems" title="src/app/Data/datos.ts" ><b>listaItems</b>&nbsp;&nbsp;&nbsp;(src/.../datos.ts)</a>
+                        </li>
+                        <li>
+                            <a href="#listaProdutosAdidas" title="src/app/Data/datos.ts" ><b>listaProdutosAdidas</b>&nbsp;&nbsp;&nbsp;(src/.../datos.ts)</a>
+                        </li>
+                        <li>
+                            <a href="#listaProdutosNike" title="src/app/Data/datos.ts" ><b>listaProdutosNike</b>&nbsp;&nbsp;&nbsp;(src/.../datos.ts)</a>
+                        </li>
+                        <li>
+                            <a href="#listaProdutosPuma" title="src/app/Data/datos.ts" ><b>listaProdutosPuma</b>&nbsp;&nbsp;&nbsp;(src/.../datos.ts)</a>
+                        </li>
+                        <li>
+                            <a href="#listaProdutosReebok" title="src/app/Data/datos.ts" ><b>listaProdutosReebok</b>&nbsp;&nbsp;&nbsp;(src/.../datos.ts)</a>
+                        </li>
+                        <li>
+                            <a href="#patternPassword" title="src/app/component/registrar/register-custom-Validators.ts" ><b>patternPassword</b>&nbsp;&nbsp;&nbsp;(src/.../register-custom-Validators.ts)</a>
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+
+    <h3>src/app/app.config.ts</h3>
+    <section data-compodoc="block-properties">
+    <h3></h3>    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="appConfig"></a>
+                    <span class="name">
+                        <span ><b>appConfig</b></span>
+                        <a href="#appConfig"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>    <code>ApplicationConfig</code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>{
+  providers: [provideZoneChangeDetection({ eventCoalescing: true }), provideRouter(routes), provideAnimationsAsync()]
+}</code>
+                    </td>
+                </tr>
+
+
+        </tbody>
+    </table>
+</section>
+    <h3>src/app/component/registrar/register-custom-Validators.ts</h3>
+    <section data-compodoc="block-properties">
+    <h3></h3>    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="crossPasswordMatchingValidatior"></a>
+                    <span class="name">
+                        <span ><b>crossPasswordMatchingValidatior</b></span>
+                        <a href="#crossPasswordMatchingValidatior"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>    <code>ValidatorFn</code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>(
+    formGroupControl: AbstractControl&lt;{ password1: string; password2: string }&gt;
+): ValidationErrors | null &#x3D;&gt; {
+    const password1 &#x3D; formGroupControl.value.password1;
+    const password2 &#x3D; formGroupControl.value.password2;
+
+    return password1 !&#x3D;&#x3D; password2 ? { crossConfirmPasswordError: true } : null
+}</code>
+                    </td>
+                </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="customPasswordValidator"></a>
+                    <span class="name">
+                        <span ><b>customPasswordValidator</b></span>
+                        <a href="#customPasswordValidator"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>(control: AbstractControl): ValidationErrors | null &#x3D;&gt; {
+    const value &#x3D; control.value;
+
+    if (!patternPassword.test(value)) {
+        return { customPasswordValidator: true }
+    }
+
+    return null
+}</code>
+                    </td>
+                </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="patternPassword"></a>
+                    <span class="name">
+                        <span ><b>patternPassword</b></span>
+                        <a href="#patternPassword"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>new RegExp(&#x27;(?&#x3D;.*\\d)(?&#x3D;.*[a-z])(?&#x3D;.*[A-Z])(?&#x3D;.*\\W).{8}&#x27;)</code>
+                    </td>
+                </tr>
+
+
+        </tbody>
+    </table>
+</section>
+    <h3>src/app/Data/datos.ts</h3>
+    <section data-compodoc="block-properties">
+    <h3></h3>    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="listaItems"></a>
+                    <span class="name">
+                        <span ><b>listaItems</b></span>
+                        <a href="#listaItems"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>    <code>[]</code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>[&#x27;nike&#x27;,&#x27;puma&#x27;,&#x27;adidas&#x27;,&#x27;reebok&#x27;]</code>
+                    </td>
+                </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="listaProdutosAdidas"></a>
+                    <span class="name">
+                        <span ><b>listaProdutosAdidas</b></span>
+                        <a href="#listaProdutosAdidas"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="../classes/Producto.html" target="_self" >Producto[]</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>[
+    {id:1, nombre:&#x27;productoAdidas1&#x27;,precio:100, stock:10, descripcion:&#x27;zapatillas deportivas&#x27;,imagen:&#x27;assets/img/zapatillaAdidas1.jpg&#x27;},
+    {id:2, nombre:&#x27;productoAdidas2&#x27;,precio:150, stock:10, descripcion:&#x27;zapatillas deportivas&#x27;,imagen:&#x27;assets/img/zapatillaAdidas1.jpg&#x27;},
+    {id:3, nombre:&#x27;productoAdidas3&#x27;,precio:300, stock:10, descripcion:&#x27;zapatillas deportivas&#x27;,imagen:&#x27;assets/img/zapatillaAdidas1.jpg&#x27;},
+    {id:4, nombre:&#x27;productoAdidas4&#x27;,precio:110, stock:10, descripcion:&#x27;zapatillas deportivas&#x27;,imagen:&#x27;assets/img/zapatillaAdidas1.jpg&#x27;},
+    {id:5, nombre:&#x27;productoAdidas5&#x27;,precio:500, stock:10, descripcion:&#x27;zapatillas deportivas&#x27;,imagen:&#x27;assets/img/zapatillaAdidas1.jpg&#x27;},
+    {id:6, nombre:&#x27;productoAdidas6&#x27;,precio:220, stock:10, descripcion:&#x27;zapatillas deportivas&#x27;,imagen:&#x27;assets/img/zapatillaAdidas1.jpg&#x27;},
+    {id:7, nombre:&#x27;productoAdidas7&#x27;,precio:599, stock:10, descripcion:&#x27;zapatillas deportivas&#x27;,imagen:&#x27;assets/img/zapatillaAdidas1.jpg&#x27;},
+    {id:8, nombre:&#x27;productoAdidas8&#x27;,precio:599, stock:10, descripcion:&#x27;zapatillas deportivas&#x27;,imagen:&#x27;assets/img/zapatillaAdidas1.jpg&#x27;},
+    {id:9, nombre:&#x27;productoAdidas9&#x27;,precio:599, stock:10, descripcion:&#x27;zapatillas deportivas&#x27;,imagen:&#x27;assets/img/zapatillaAdidas1.jpg&#x27;}
+]</code>
+                    </td>
+                </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="listaProdutosNike"></a>
+                    <span class="name">
+                        <span ><b>listaProdutosNike</b></span>
+                        <a href="#listaProdutosNike"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="../classes/Producto.html" target="_self" >Producto[]</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>[
+    {id:1, nombre:&#x27;productoNike1&#x27;,precio:100, stock:10, descripcion:&#x27;zapatillas deportivas&#x27;,imagen:&#x27;assets/img/zapatillaNike1.jpg&#x27;},
+    {id:2, nombre:&#x27;productoNike2&#x27;,precio:150, stock:10, descripcion:&#x27;zapatillas deportivas&#x27;,imagen:&#x27;assets/img/zapatillaNike1.jpg&#x27;},
+    {id:3, nombre:&#x27;productoNike3&#x27;,precio:300, stock:10, descripcion:&#x27;zapatillas deportivas&#x27;,imagen:&#x27;assets/img/zapatillaNike1.jpg&#x27;},
+    {id:4, nombre:&#x27;productoNike4&#x27;,precio:110, stock:10, descripcion:&#x27;zapatillas deportivas&#x27;,imagen:&#x27;assets/img/zapatillaNike1.jpg&#x27;},
+    {id:5, nombre:&#x27;productoNike5&#x27;,precio:500, stock:10, descripcion:&#x27;zapatillas deportivas&#x27;,imagen:&#x27;assets/img/zapatillaNike1.jpg&#x27;},
+    {id:6, nombre:&#x27;productoNike6&#x27;,precio:220, stock:10, descripcion:&#x27;zapatillas deportivas&#x27;,imagen:&#x27;assets/img/zapatillaNike1.jpg&#x27;},
+    {id:7, nombre:&#x27;productoNike7&#x27;,precio:599, stock:10, descripcion:&#x27;zapatillas deportivas&#x27;,imagen:&#x27;assets/img/zapatillaNike1.jpg&#x27;},
+    {id:8, nombre:&#x27;productoNike8&#x27;,precio:299, stock:10, descripcion:&#x27;zapatillas deportivas&#x27;,imagen:&#x27;assets/img/zapatillaNike1.jpg&#x27;}
+]</code>
+                    </td>
+                </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="listaProdutosPuma"></a>
+                    <span class="name">
+                        <span ><b>listaProdutosPuma</b></span>
+                        <a href="#listaProdutosPuma"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="../classes/Producto.html" target="_self" >Producto[]</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>[
+    {id:1, nombre:&#x27;productoPuma1&#x27;,precio:100, stock:10, descripcion:&#x27;zapatillas deportivas&#x27;,imagen:&#x27;assets/img/zapatillaPuma1.jpg&#x27;},
+    {id:2, nombre:&#x27;productoPuma2&#x27;,precio:150, stock:10, descripcion:&#x27;zapatillas deportivas&#x27;,imagen:&#x27;assets/img/zapatillaPuma1.jpg&#x27;},
+    {id:3, nombre:&#x27;productoPuma3&#x27;,precio:300, stock:10, descripcion:&#x27;zapatillas deportivas&#x27;,imagen:&#x27;assets/img/zapatillaPuma1.jpg&#x27;},
+    {id:4, nombre:&#x27;productoPuma4&#x27;,precio:110, stock:10, descripcion:&#x27;zapatillas deportivas&#x27;,imagen:&#x27;assets/img/zapatillaPuma1.jpg&#x27;},
+    {id:5, nombre:&#x27;productoPuma5&#x27;,precio:500, stock:10, descripcion:&#x27;zapatillas deportivas&#x27;,imagen:&#x27;assets/img/zapatillaPuma1.jpg&#x27;},
+    {id:6, nombre:&#x27;productoPuma6&#x27;,precio:220, stock:10, descripcion:&#x27;zapatillas deportivas&#x27;,imagen:&#x27;assets/img/zapatillaPuma1.jpg&#x27;},
+    {id:7, nombre:&#x27;productoPuma7&#x27;,precio:599, stock:10, descripcion:&#x27;zapatillas deportivas&#x27;,imagen:&#x27;assets/img/zapatillaPuma1.jpg&#x27;}
+]</code>
+                    </td>
+                </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="listaProdutosReebok"></a>
+                    <span class="name">
+                        <span ><b>listaProdutosReebok</b></span>
+                        <a href="#listaProdutosReebok"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="../classes/Producto.html" target="_self" >Producto[]</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>[
+    {id:1, nombre:&#x27;productoReebok1&#x27;,precio:100, stock:10, descripcion:&#x27;zapatillas deportivas&#x27;,imagen:&#x27;assets/img/zapatillasReebok1.jpg&#x27;},
+    {id:2, nombre:&#x27;productoReebok2&#x27;,precio:150, stock:10, descripcion:&#x27;zapatillas deportivas&#x27;,imagen:&#x27;assets/img/zapatillasReebok1.jpg&#x27;},
+    {id:3, nombre:&#x27;productoReebok3&#x27;,precio:300, stock:10, descripcion:&#x27;zapatillas deportivas&#x27;,imagen:&#x27;assets/img/zapatillasReebok1.jpg&#x27;},
+    {id:4, nombre:&#x27;productoReebok4&#x27;,precio:110, stock:10, descripcion:&#x27;zapatillas deportivas&#x27;,imagen:&#x27;assets/img/zapatillasReebok1.jpg&#x27;},
+    {id:5, nombre:&#x27;productoReebok5&#x27;,precio:500, stock:10, descripcion:&#x27;zapatillas deportivas&#x27;,imagen:&#x27;assets/img/zapatillasReebok1.jpg&#x27;},
+    {id:6, nombre:&#x27;productoReebok6&#x27;,precio:220, stock:10, descripcion:&#x27;zapatillas deportivas&#x27;,imagen:&#x27;assets/img/zapatillasReebok1.jpg&#x27;},
+    {id:7, nombre:&#x27;productoReebok7&#x27;,precio:599, stock:10, descripcion:&#x27;zapatillas deportivas&#x27;,imagen:&#x27;assets/img/zapatillasReebok1.jpg&#x27;},
+    {id:8, nombre:&#x27;productoReebok8&#x27;,precio:599, stock:10, descripcion:&#x27;zapatillas deportivas&#x27;,imagen:&#x27;assets/img/zapatillasReebok1.jpg&#x27;},
+    {id:9, nombre:&#x27;productoReebok9&#x27;,precio:599, stock:10, descripcion:&#x27;zapatillas deportivas&#x27;,imagen:&#x27;assets/img/zapatillasReebok1.jpg&#x27;}
+]</code>
+                    </td>
+                </tr>
+
+
+        </tbody>
+    </table>
+</section>
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+          <label class="dark-mode-switch">
+               <input type="checkbox">
+               <span class="slider">
+                    <svg class="slider-icon" viewBox="0 0 24 24" fill="none" height="20" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" width="20" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"></path>
+                    </svg>
+               </span>
+          </label>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'miscellaneous-variables';
+            var COMPODOC_CURRENT_PAGE_URL = 'variables.html';
+            var MAX_SEARCH_RESULTS = 15;
+       </script>
+
+       <script>
+               $darkModeToggleSwitchers = document.querySelectorAll('.dark-mode-switch input');
+               checkToggle(darkModeState);
+               if ($darkModeToggleSwitchers.length > 0) {
+                    for (var i = 0; i < $darkModeToggleSwitchers.length; i++) {
+                         $darkModeToggleSwitchers[i].addEventListener('change', function (event) {
+                              darkModeState = !darkModeState;
+                              toggleDarkMode(darkModeState);
+                         });
+                    }
+               }
+          </script>
+
+       <script src="../js/libs/custom-elements.min.js"></script>
+       <script src="../js/libs/lit-html.js"></script>
+
+       <script src="../js/menu-wc.js" defer></script>
+       <script nomodule src="../js/menu-wc_es5.js" defer></script>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+       <script src="../js/libs/zepto.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/clipboard.min.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+          <script src="../js/search/search.js"></script>
+          <script src="../js/search/lunr.min.js"></script>
+          <script src="../js/search/search-lunr.js"></script>
+          <script src="../js/search/search_index.js"></script>
+       <script src="../js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>

@@ -1,0 +1,28 @@
+<div class="text-center" style="height: 5rem;">
+    <div class="">
+        <h1>Listado de Productos Adidas</h1>
+    </div>
+</div>
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <div class="d-flex justify-content-center text-center flex-wrap">
+                <div *ngFor="let item of listaProd" class="card mx-2 my-2" style="width: 15rem;">
+                    <div class="card-header p-0">
+                        <img src="{{item.imagen}}" class="card-img-top" alt="...">
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">{{item.nombre}}</h5>
+                        <p class="card-text">{{item.descripcion}}</p>
+                        <p class="card-text">${{item.precio}}</p>
+                        <p class="card-text">Sku : {{item.id}}</p>
+                    </div>
+                    <div class="card-footer">
+                        <a href="#" class="btn btn-primary">Comprar</a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>

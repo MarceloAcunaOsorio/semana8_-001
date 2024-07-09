@@ -1,0 +1,20 @@
+
+/*controla el tamaño de imagen del carrucel*/
+.imagen{
+    width: 50vw;
+    height: 80vh;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+/*controla el color del boton previo del carrucel*/
+.carousel-control-prev{
+    filter: invert(108%);
+}
+
+
+/*controla el color del boton siguiente del carrucel*/
+.carousel-control-next{
+    filter: invert(108%);
+}
